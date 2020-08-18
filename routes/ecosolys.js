@@ -4,11 +4,6 @@ const jsonFile = require('../helpers/jsonHandler');
 const { getJson } = jsonFile;
 /* GET users listing. */
 router.get('/', async function (req, res, next) {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header(
-    'Access-Control-Allow-Headers',
-    'Origin, X-Request-Width, Content-Type, Accept'
-  );
   try {
     const json = await getJson();
     res.send(json.jokers);
@@ -20,11 +15,6 @@ router.get('/', async function (req, res, next) {
 //Change data from id
 //Etapa 2
 router.put('/:id', async (req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header(
-    'Access-Control-Allow-Headers',
-    'Origin, X-Request-Width, Content-Type, Accept'
-  );
   try {
     //const msg = req.body;
     const id = parseInt(req.params.id);
