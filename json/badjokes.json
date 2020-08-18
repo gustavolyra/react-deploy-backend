@@ -1,0 +1,68 @@
+{
+  "nextId": 6,
+  "jokers": [
+    {
+      "id": 0,
+      "name": "Martin",
+      "lastJoke": "2020-08-13",
+      "record": "15",
+      "avatar": "http://localhost:3001/images/martin.jpg"
+    },
+    {
+      "id": 1,
+      "name": "Vinicius",
+      "lastJoke": "2020-08-13",
+      "record": "15",
+      "avatar": "http://localhost:3001/images/vini.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Moises",
+      "lastJoke": "2020-08-13",
+      "record": "15",
+      "avatar": "http://localhost:3001/images/moises.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Baumann",
+      "lastJoke": "2020-08-13",
+      "record": "15",
+      "avatar": "http://localhost:3001/images/bau.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Walter",
+      "lastJoke": "2020-08-13",
+      "record": "15",
+      "avatar": "http://localhost:3001/images/walter.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Gustavo",
+      "lastJoke": "2020-08-13",
+      "record": "15",
+      "avatar": "http://localhost:3001/images/gustavo.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Thiago",
+      "lastJoke": "2020-08-13",
+      "record": "15",
+      "avatar": "http://localhost:3001/images/gustavo.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Anderson",
+      "lastJoke": "2020-08-13",
+      "record": "15",
+      "avatar": "http://localhost:3001/images/gustavo.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Luan",
+      "lastJoke": "2020-08-13",
+      "record": "15",
+      "avatar": "http://localhost:3001/images/gustavo.jpg"
+    }
+  ]
+}
