@@ -4,18 +4,17 @@ const express = require('express');
 const router = express.Router();
 
 /* GET users listing. */
-router.get('/', async function (req, res, next) {
+router.get('/', async function (req, res) {
   try {
     const listJoker = await jokerModel.find({});
     res.status(200).send(listJoker);
-  } catch (error) {
-    res.send(error);
+  } catch (err) {
+    res.send(err);
   }
 });
 
-//Change data from id
-//Etapa 2
-router.patch('/restart', async (req, res, next) => {
+//Change data from name
+router.patch('/restart', async (req, res) => {
   try {
     //const msg = req.body;
     const { name } = req.body;
@@ -28,6 +27,20 @@ router.patch('/restart', async (req, res, next) => {
     res.status(200).send(joker);
   } catch (err) {
     res.status(400).send({ error: err.message });
+  }
+});
+
+//Reset everyone
+router.patch('/restartAll', async (req, res) => {
+  try {
+    const allJokers = await jokerModel.update(
+      {},
+      [{ $set: { lastJoke: new Date(Date.now()), record: 0 } }],
+      { multi: true }
+    );
+    res.status(200).send(allJokers);
+  } catch (err) {
+    res.status(500).send(err);
   }
 });
 

@@ -4,33 +4,13 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const mongoose = require('mongoose');
 const indexRouter = require('./routes/index');
 const ecosolysRouter = require('./routes/ecosolys');
-require('dotenv').config();
+const connectDB = require('./modules/mongoDB');
 
 const app = express();
 
-/*Conexao com o MongoDB*/
-(async () => {
-  try {
-    await mongoose.connect(
-      'mongodb+srv://' +
-        process.env.USERDB +
-        ':' +
-        process.env.PWDDB +
-        '@cluster0.hjh9y.mongodb.net/joker?retryWrites=true&w=majority',
-      {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        useFindAndModify: false,
-      }
-    );
-    console.log('Conectado no MongoDB');
-  } catch (error) {
-    console.log('Erro ao conectar no MongoDB : ' + error);
-  }
-})();
+connectDB();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
